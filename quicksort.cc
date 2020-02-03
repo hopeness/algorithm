@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "tools.hpp"
+#include "tools.hh"
 
 using namespace std;
 
@@ -33,7 +33,6 @@ int partition(vector<int> *A, int p, int r)
     int tmp;
     for (int j = p + 1; j <= r; j++)
     {
-        cout << (*A)[j] << endl;
         if ((*A)[j] <= x)
         {
             ++i;
