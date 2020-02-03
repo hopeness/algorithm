@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
+#include "tools.h"
 
 using namespace std;
 
@@ -9,26 +10,16 @@ int right(int i);
 void maxHeapify(vector<int> *A, int i);
 void heapsort(vector<int> *A);
 void buildMaxHeap(vector<int> *A);
-void echo(vector<int> *A);
 
 int heapSize = 0;
 
 int main(int argc, char *argv[])
 {
     vector<int> A;
-    while (--argc)
-        A.push_back(atoi(*(++argv)));
-
+    getArgv(argc, argv, &A);
     heapsort(&A);
     echo(&A);
     return 0;
-}
-
-void echo(vector<int> *A)
-{
-    for (vector<int>::const_iterator iter = A->begin(); iter != A->end(); ++iter)
-        cout << *iter << " ";
-    cout << endl;
 }
 
 void heapsort(vector<int> *A)
