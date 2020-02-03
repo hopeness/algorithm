@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
-#include "tools.h"
+#include "tools.hh"
 
 using namespace std;
 
